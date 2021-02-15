@@ -1,0 +1,12 @@
+https://cdnjs.com/libraries/font-awesome
+https://cdnjs.com/
+
+https://fonts.google.com/
+
+https://code.jquery.com/
+
+http://iamdustan.com/smoothscroll/
+https://css-tricks.com/snippets/jquery/smooth-scrolling/
+
+// Favicon Generator
+https://tools.dynamicdrive.com/favicon/

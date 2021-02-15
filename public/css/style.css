@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;  
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.91;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+#navbar.top {
+  background: transparent;;
+}
+
+#navbar {
+  z-index: 11;
+}
+
+#navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
+#navbar a:hover {
+  border-bottom: #28a745 2px solid;
+}
+
+#navbar ul {
+  display: flex;
+}
+
+#navbar .logo {
+  font-weight: 400;
+}
+
+/* Header */
+.hero {
+  /* display: flex; */
+  background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+  height: 100vh; /* 100 vew ports */
+  position: relative;
+  color: #fff;
+}
+
+.hero .contant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%; /* 100% of its container */
+  padding: 0 20px;
+}
+
+.hero .contant h1 {
+  font-size: 4rem;
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.hero .contant p {
+  font-size: 1.5rem;
+  font-size: 23px;
+  margin: 20px 0 30px;
+
+}
+
+.hero::before {
+  content: '';
+  position: absolute; /* abs position can be only if parent is re lative */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background:black;
+  opacity: 0.6; */
+  background: rgba(0,0,0,0.6);
+}
+
+.hero * {
+  z-index: 10;
+}
+
+.hero.blog {
+  background: url('../images/home/blog.jpg') no-repeat center center/cover;
+  height: 30vh;
+}
+
+/* Icons */
+.icons {
+  padding: 30px;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.icons i {
+  color: #fff;
+  background: #28a745;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+
+}
+
+/* Cases */
+.cases img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.team img {
+  border-radius: 50%;
+}
+
+/* Contact */
+/* Callback Form  */
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  border-radius: 5px;
+  padding: 4px;
+  width: 100%;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* Post */
+.post {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  padding: 50px 30px;
+  flex: 100%;
+}
+
+.post img {
+  border-radius: 50%;
+  max-width: 25rem;
+  /* width: 300px; */
+  margin: 4rem 0;
+  align-self: center;
+  /* display: block; */
+  margin: 0 auto 30px;
+  flex: 100%;
+}
+
+.post h2 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid #ccc 1px;
+}
+
+.post .meta {
+  margin-bottom: 30px;
+}
+
+.post p {
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* padding: 4rem; */
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  /* padding: 1rem; */
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+
+/* Mobile */
+@media only screen and (max-width: 800px) {  /* 768px is default for tablet */
+   #navbar {
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 120px;
+    /* padding: 20px; */
+   }
+
+   #navbar a {
+    padding: 15px 10px; 
+    margin: 0 3px;
+   }
+
+   .hero .contant h1 {
+    font-size: 2.7rem;
+  }
+
+  .hero .contant p {
+    font-size: 1.2rem;
+  }
+
+
+  .flex-items {
+   flex-direction: column;
+  }
+
+  
+  /* .flex-columns .row .column,
+  .solutions.flex-columns .column,
+  .blog.flex-columns .column,        .flex-grid .column,  Same Result
+  #cases .column, 
+  #contact .column {
+    
+    flex: 100%;
+    max-width: 100%;
+  
+  }
+   */
+  /* THIS doesn't work for me!!!!!  */
+  .flex-columns .row .column,
+  #cases .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  #team {
+    background: #f5f5f5;
+  }
+  .team img {
+    width: 80%;
+  }
+
+  #blog-body .contant h1{
+    margin-top: 6rem;
+    /* display: none; */
+  }
+
+}
+
+@media(max-height: 400px)  {
+  #navbar {
+    height: 100px;
+
+  }
+  #blog-body .contant h1{
+    display: none;
+  }
+
+  #blog-body .hero.blog {
+    height: 100px;
+    background:rgba(0, 0, 0, 0)
+  }
+
+}
+
